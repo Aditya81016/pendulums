@@ -31,3 +31,17 @@ body,
   background: var(--foreground);
   opacity: 0.2;
 }
+
+button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #222;
+  color: var(--foreground);
+  border: none;
+  border-radius: 0.1rem;
+  &:hover {
+    background: #333;
+  }
+}
