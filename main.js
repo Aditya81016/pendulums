@@ -12,8 +12,9 @@ document.body.addEventListener("resize", () => {
 document.getElementById("nav").onclick = () => {
   let params = "?";
   for (const key in config)
-    params += key + "=" + JSON.stringify(config[key]) + "&";
-  window.location.assign(window.location.origin + params);
+    if (key !== "random")
+      params += key + "=" + JSON.stringify(config[key]) + "&";
+  window.location.assign(window.location.origin + params + "random");
 };
 
 const $ = (base, gap, i) => base * (1 + gap) ** i;

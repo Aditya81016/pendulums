@@ -46,7 +46,7 @@ params.forEach((param) => {
       config[key] = JSON.parse(value);
     } catch {
       if (typeof value === "string")
-        config[key] = value.replaceAll("%20", " ").replaceAll("%22", " ");
+        config[key] = value.replaceAll("%20", " ").replaceAll("%22", "");
       else config[key] = value;
     }
 });
