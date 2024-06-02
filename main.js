@@ -14,7 +14,7 @@ document.getElementById("nav").onclick = () => {
   for (const key in config)
     if (key !== "random")
       params += key + "=" + JSON.stringify(config[key]) + "&";
-  window.location.assign(window.location.origin + params + "random");
+  window.location.assign(window.location.pathname + params + "random");
 };
 
 const $ = (base, gap, i) => base * (1 + gap) ** i;
